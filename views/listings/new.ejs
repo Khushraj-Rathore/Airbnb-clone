@@ -1,0 +1,56 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+  <div class="col-8 offset-2">
+<h3>Create a New Listing</h3><br><br>
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-3">
+      <lable for="title" class="form-lable\">Title</lable>
+      <input name="listing[title]" placeholder="enter title" type="text" class="form-control" required/>
+      <div class="valid-feedback">Title looks good</div>
+    </div>
+      <div>
+      <lable for="description" class="form-lable\">description</lable>
+      <textarea
+        name="listing[description]"
+        class="form-control"
+        required
+      ></textarea>
+      <div class="invalid-feedback"> Description should be valid</div>
+    </div>
+
+      <div class="mb-3">
+        <lable for="image" class="form-lable\">image</lable>
+        <input
+        name="listing[image]"
+        type="file"
+        class="form-control"
+        required
+      /></div>
+      
+      <div class="mb-3">
+        <lable for="price" class="form-lable\">Price</lable>
+        <input name="listing[price]" placeholder="enter price"  class="form-control" required/>
+        <div class="invalid-feedback">Price should be valid</div>
+      </div>
+      <div class="mb-3">
+        <lable for="country" class="form-lable\">country</lable>
+        <input name="listing[country]" placeholder="enter country" type="text" class="form-control" required/>
+        <div class="invalid-feedback">Country name should be valid</div>
+      </div>
+      <div class="mb-3">
+        <lable for="location" class="form-lable\">location</lable>
+        <input
+        name="listing[location]"
+        placeholder="enter location"
+        type="text"
+        class="form-control"
+        required
+      />
+      <div class="invalid-feedback">Location name should be valid</div>
+    </div>  
+      <br><br>
+      <button class="btn btn-dark">Add</button>
+      <br><br>
+    </form>
+</div>
+</div>
